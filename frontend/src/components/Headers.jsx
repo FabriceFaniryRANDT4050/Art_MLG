@@ -1,6 +1,6 @@
 // Headers.jsx
 import React from 'react';
-// import { Search, ShoppingBag, User } from 'lucide-react'; // Utilisation d'icônes populaires
+import { Search, ShoppingBag, User } from 'lucide-react'; // Utilisation d'icônes populaires
 
 // Lien d'entete de navigation
 const navLinks = [
@@ -49,13 +49,13 @@ const Headers = () => {
           <div className="flex items-center space-x-6">
             
             {/* Recherche */}
-            <button aria-label="Recherche" className="p-2 text-gray-700 hover:text-gray-900 transition duration-150">
-              {/* <Search className="h-6 w-6" /> */}
+            <button aria-label="Recherche" className="p-2 transition duration-150">
+              <Search className="h-6 w-6" />
             </button>
             
             {/* Panier */}
-            <button aria-label="Panier" className="relative p-2 text-gray-700 hover:text-gray-900 transition duration-150">
-              {/* <ShoppingBag className="h-6 w-6" /> */}
+            <button aria-label="Panier" className="relative p-2 transition duration-150">
+              <ShoppingBag className="h-6 w-6" />
               {/* Le badge du panier (Orange) */}
               <span className="absolute -top-1 -right-1 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-orange-500 rounded-full">
                 6 {/* Le chiffre 6 est visible sur l'image */}
@@ -63,8 +63,8 @@ const Headers = () => {
             </button>
             
             {/* Compte Utilisateur */}
-            <button aria-label="Compte utilisateur" className="p-2 text-gray-700 hover:text-gray-900 transition duration-150">
-              {/* <User className="h-6 w-6" /> */}
+            <button aria-label="Compte utilisateur" className="p-2 transition duration-150">
+              <User className="h-6 w-6" />
             </button>
           </div>
 
