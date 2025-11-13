@@ -146,11 +146,11 @@ const FilterSidebar = ({ filters, onFilterChange }) => {
 };
 
 // ====================================================================
-// IV. COMPOSANT ProductListingPage (Principal)
+// IV. COMPOSANT ProduitsPage (Principal)
 // La logique de prix est mise à jour ici pour les montants en Ar.
 // ====================================================================
 
-const ProductListingPage = () => {
+const ProduitsPage = () => {
     // 1. État des produits et des filtres
     const [products] = useState(initialProductsData);
     const [filteredProducts, setFilteredProducts] = useState(initialProductsData);
@@ -194,7 +194,7 @@ const ProductListingPage = () => {
     const otherProducts = filteredProducts.slice(3);
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
+        <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-gray-50">
             <div className="lg:grid lg:grid-cols-4 lg:gap-8">
                 
                 {/* ➡️ Barre Latérale des Filtres */}
@@ -245,4 +245,4 @@ const ProductListingPage = () => {
     );
 };
 
-export default ProductListingPage;
+export default ProduitsPage;

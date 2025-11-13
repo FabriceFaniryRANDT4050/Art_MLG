@@ -60,7 +60,7 @@ export const Footer = () => {
 
   return (
     <footer className="w-full bg-white font-sans text-base">
-        <div className='text-left text-4xl font-bold tex text-stone-900 p-5 pt-10'>Harena Cosmétiques </div>
+        {/* <div className='text-left text-4xl font-bold tex text-stone-900 p-5 pt-10'>Harena Cosmétiques </div> */}
 
         {/* 1. Bloc Newsletter (Responsive) */}
         <div 
@@ -89,7 +89,7 @@ export const Footer = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 // Classes pour assurer l'alignement à gauche et la flexibilité
-                                className={`flex-grow py-3 px-3 bg-stone-200 text-gray-700 outline-none placeholder-gray-500 text-left`}
+                                className={` py-3 px-3 bg-stone-200 text-gray-700 outline-none placeholder-gray-500 text-left`}
                                 style={{ borderBottomColor: INPUT_BORDER_COLOR }}
                                 required
                             />
