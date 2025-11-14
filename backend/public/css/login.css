@@ -1,0 +1,137 @@
+/* Fichier : public/css/login.css */
+
+/* 1. Conteneur principal (pour centrer la carte et définir l'arrière-plan) */
+.login-page-wrapper {
+    /* Style du fond (image de voyage de Figma) */
+    background-image: url('images/travel-bg.jpg'); /*  */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    padding: 20px;
+}
+
+/* 2. La carte de connexion elle-même */
+.login-card {
+    background-color: #ffffff; /* Souvent blanc ou légèrement translucide */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Largeur typique pour une carte de connexion */
+    width: 100%;
+}
+
+/* 3. En-tête et titres */
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-title {
+    font-size: 2em;
+    color: #4CAF50; /* Couleur primaire */
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+/* 4. Champs de formulaire */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-sizing: border-box; /* Très important */
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* 5. Boutons et options */
+.form-options {
+    text-align: right;
+    margin-top: -10px; /* Remonte le lien vers le champ d'entrée */
+    margin-bottom: 20px;
+}
+
+.forgot-password-link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50; /* Couleur d'action principale */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+/* 6. Connexion sociale */
+.social-login {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.social-separator {
+    font-size: 0.85em;
+    color: #adb5bd;
+    margin-bottom: 15px;
+    /* Pour la ligne de séparation de chaque côté, utilisez des pseudo-éléments ::before/::after */
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-btn {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* 7. Pied de page */
+.login-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+.register-link {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+}

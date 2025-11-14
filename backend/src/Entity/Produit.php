@@ -162,7 +162,8 @@ class Produit
         return $this->avis;
     }
 
-    public function addAvi(Avis $avi): static
+    // Méthode corrigée/renommée
+    public function addAvis(Avis $avi): static 
     {
         if (!$this->avis->contains($avi)) {
             $this->avis->add($avi);
@@ -171,7 +172,8 @@ class Produit
         return $this;
     }
 
-    public function removeAvi(Avis $avi): static
+    // Méthode corrigée/renommée
+    public function removeAvis(Avis $avi): static
     {
         $this->avis->removeElement($avi);
 

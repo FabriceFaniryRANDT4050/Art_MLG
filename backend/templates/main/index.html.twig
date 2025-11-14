@@ -1,20 +1,81 @@
+
+{# Fichier : templates/security/login.html.twig #}
+
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello Dev!{% endblock %}
+{% block title %}Connexion - TravelGo{% endblock %}
+
+{% block stylesheets %}
+    {# Assurez-vous d'avoir un fichier login.css qui contient tous les styles #}
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="login-page-wrapper">
+        
+        {# L'élément principal qui contient le formulaire (la "carte" de connexion) #}
+        <div class="login-card">
+            
+            <header class="login-header">
+                {# Remplacez "TravelGo" par votre logo ou le titre du design Figma #}
+                <h1 class="logo-title">Fiber Color</h1>
+                <p class="subtitle">Connectez-vous pour commencer votre compte.</p>
+            </header>
 
-<div class="example-wrapper">
-    <h1>Hello Dev ✅</h1>
+            <form method="post" class="login-form">
+            {# <form method="post" class="login-form" action="{{ path('app_login') }}"> #}
+                
+                {# Affichage des erreurs, typique pour Symfony Security #}
+                {# {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %} #}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>E:/JOB/DEV/Art MLG/backend/src/Controller/MainController.php</code></li>
-        <li>Your template at <code>E:/JOB/DEV/Art MLG/backend/templates/main/index.html.twig</code></li>
-    </ul>
-</div>
+                {# Champ Email/Nom d'utilisateur #}
+                <div class="form-group">
+                    <label for="username">Email</label>
+                    <input type="email" value="" name="_username" id="username" class="form-input" required autofocus>
+                    {# <input type="email" value="{{ last_username }}" name="_username" id="username" class="form-input" required autofocus> #}
+                </div>
+
+                {# Champ Mot de passe #}
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="_password" id="password" class="form-input" required>
+                </div>
+
+                {# Lien Mot de passe oublié (souvent aligné à droite) #}
+                <div class="form-options">
+                    <a href="#" class="forgot-password-link">Mot de passe oublié ?</a>
+                    {# <a href="{{ path('app_forgot_password') }}" class="forgot-password-link">Mot de passe oublié ?</a> #}
+                </div>
+
+                {# Jeton CSRF pour la sécurité #}
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+                {# Bouton de connexion principal #}
+                <button type="submit" class="login-button">
+                    Se connecter
+                </button>
+            </form>
+            
+            {# Section pour les connexions sociales (si présente dans le design Figma) #}
+            <div class="social-login">
+                <p class="social-separator">ou continuer avec</p>
+                <div class="social-buttons">
+                    <button class="social-btn google-btn">
+                        <i class="icon-google"></i> Google
+                    </button>
+                    <button class="social-btn facebook-btn">
+                        <i class="icon-facebook"></i> Facebook
+                    </button>
+                </div>
+            </div>
+
+            {# Pied de page pour le lien d'inscription #}
+            <footer class="login-footer">
+                <p>Pas encore de compte ? <a href="#" class="register-link">Créer un compte</a></p>
+                {# <p>Pas encore de compte ? <a href="{{ path('app_register') }}" class="register-link">Créer un compte</a></p> #}
+            </footer>
+        </div>
+    </div>
 {% endblock %}
